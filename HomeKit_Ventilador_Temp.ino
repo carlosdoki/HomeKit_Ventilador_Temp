@@ -84,6 +84,9 @@ void setup() {
 
 void loop() {
 	my_homekit_loop();
+  if (!WiFi.isConnected()) {
+     wifi_connect(); 
+  }
 	delay(10);
 }
 
